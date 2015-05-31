@@ -1,0 +1,46 @@
+Calender Application spec
+
+Author: Ton van Lankveld
+Version: 2015-05-31
+
+
+PURPOSE
+An application to show and manage the Calender page for the public and members part of www.ccms-best.nl .
+
+
+APPLICATIONS AND DATA
+The ccms-agenda JSON file is the link between the applications.
+Calender Viewer. PHP code to read the ccms-agenda JSON file and builds the Calender HTML page.
+Calender Editor. PHP, on server, and JavaScript, in browser, to edit the ccms-agenda JSON file.
+Calender Generator. PHP code to generate repeating meeting.
+
+
+FILES IN PUBLIC SITE
+agenda_nl.php
+agenda_en.php
+
+
+FILES IN MEMBERS SITE
+ledenagenda_nl.php
+agenda-edit_nl
+ccms-agenda.json
+
+
+CALENDER ON PUBLIC SITE
+Show a table, in chronological order, with the planned meetings.
+The table has these columns:
+    Date	Required
+    Time	Required
+	Subject	Optional
+    Group	Required
+
+
+CALENDER ON MEMBERS SITE
+Show a table, in chronological order, with the planned meetings.
+The table has these columns:
+    Date			Required
+    Time			Required
+	Subject			Optional
+    Group			Required
+    Location		Optional
+    Contact Person	Required
