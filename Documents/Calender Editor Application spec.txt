@@ -1,0 +1,22 @@
+Calender Editor Application spec
+
+Author: Ton van Lankveld
+Version: 2015-05-30
+
+
+PURPOSE
+An application to show and manage the Calender page for the public and members part of www.ccms-best.nl .
+
+
+FLOW
+The editor can only be accessed via the members site.
+You have to login to open the editor.
+The editor page shows all the planned meetings as a list.
+Every meeting row has an Edit and Delete button.
+If you click on the Delete button, the row of this meeting will be deleted from the list.
+	  Any change to the list is backed-up in the session memory. For the Undo function.
+Above the meetings list is an Add Meeting and Undo button.
+If you click on the Edit or Add Meeting button, the fields of the meeting are shown.
+After the list is changed, this list is sorted on date-time.
+If you click the Save button, the list is stored as; ccms-agenda.json.
+Copy file to public site.
