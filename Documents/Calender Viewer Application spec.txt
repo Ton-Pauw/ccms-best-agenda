@@ -1,0 +1,18 @@
+Calender Viewer Application spec
+
+Author: Ton van Lankveld
+Version: 2015-05-30
+
+
+PURPOSE
+An application to build the Calender page.
+
+
+FLOW
+Load; ccms-agenda.json
+    If file not found, place message in page
+    Filter and validate data from JSON file. See: JSON filter validation.ods
+Translate ISO8601 to Date and Time cells
+Combine Contact and Email to Contact Person cell
+Ignore meetings before current date    
+Build HTML page
