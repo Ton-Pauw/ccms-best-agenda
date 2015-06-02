@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2015-05-30
+Version: 2015-06-02
 
 
 PURPOSE
@@ -11,12 +11,17 @@ An application to show and manage the Calender page for the public and members p
 FLOW
 The editor can only be accessed via the members site.
 You have to login to open the editor.
-The editor page shows all the planned meetings as a list.
-Every meeting row has an Edit and Delete button.
+Load ccms-agenda.json
+Load contactpersonen.json
+Build HTML Editor page with:
+- list of meetings with Edit and Delete buttons
+- Buttons Add Meetings and Undo
+- Hide contactpersonen data
+Changed to the data and the page, in the browser, are done with JavaScript.
 If you click on the Delete button, the row of this meeting will be deleted from the list.
-	  Any change to the list is backed-up in the session memory. For the Undo function.
-Above the meetings list is an Add Meeting and Undo button.
 If you click on the Edit or Add Meeting button, the fields of the meeting are shown.
-After the list is changed, this list is sorted on date-time.
-If you click the Save button, the list is stored as; ccms-agenda.json.
+    After the list is changed, this list is sorted on date-time.
+    The list is backed-up in the session memory. For the Undo function.
+If you click the Save button, the list is stored on the server as; ccms-agenda.json.
+Close Editor page
 Copy file to public site.
