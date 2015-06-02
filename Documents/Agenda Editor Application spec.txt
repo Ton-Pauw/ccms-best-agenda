@@ -1,11 +1,11 @@
-Calender Editor Application spec
+Agenda Editor Application spec
 
 Author: Ton van Lankveld
 Version: 2015-06-02
 
 
 PURPOSE
-An application to show and manage the Calender page for the public and members part of www.ccms-best.nl .
+An application to show and manage the Agenda page for the public and members part of www.ccms-best.nl .
 
 
 FLOW
