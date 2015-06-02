@@ -1,4 +1,4 @@
-Calender Application spec
+Agenda Application spec
 
 Author: Ton van Lankveld
 Version: 2015-05-31
