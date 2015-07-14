@@ -85,7 +85,7 @@ function filterValidateMeetingArray($inpArray) {
     'group'     => '',
     'location'  => '',
     'contact'   => '',
-    'email'     => '',
+    'email'     => ''
   ];
   $startClean = filterValidateIso8601($inpArray['start']);
   if ($startClean) {
@@ -173,7 +173,7 @@ function HTMLtableRow($meetingArray) {
   $timeStr = substr($meetingArray['start'], 11, 5).' - '.substr($meetingArray['end'], 11, 5).' uur';
   $contactStr = $meetingArray['contact'].' <a href="mailto:'.$meetingArray['email'].'\?subject=CCMS '.$meetingArray['groep'].'">E-mail</a>';
   // Build HTML string
-  $outStr = '<tr><td>'.$dateStr.'</td><td>'.$timeStr.'</td><td>'.$meetingArray['onderwerp'].'</td><td>'.$meetingArray['groep'].'</td><td>'.$meetingArray['location'].'</td><td>'.$contactStr.'</td><tr>';
+  $outStr = '<tr><td>'.$dateStr.'</td><td>'.$timeStr.'</td><td>'.$meetingArray['onderwerp'].'</td><td>'.$meetingArray['groep'].'</td><td>'.$meetingArray['location'].'</td><td>'.$contactStr.'</td></tr>';
   return $outStr;
 }
 
