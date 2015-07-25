@@ -151,11 +151,13 @@ function iso8601ToHTMLdates($iso8601Str) {
   $MONTHS2 = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
   $DAYOFTHEWEEK1 = ['Zondag', 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag'];
   $DAYOFTHEWEEK2 = ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'];
+  $dayNumberInt = 0;
   $outStr = '';
   $dateObj = date_create_from_format('Y-m-d\TH:i:s', $iso8601Str);
+  $dayNumberInt = $dateObj->format('w');
   // Build 2 date strings; day-of-week number month 
-  $fullDateStr = $DAYOFTHEWEEK1[(int) date('w')].' '.substr($iso8601Str, 8, 2).' '.$MONTHS1[((int) (substr($iso8601Str, 5, 2))-1)];
-  $abbrDateStr = $DAYOFTHEWEEK2[(int) date('w')].' '.substr($iso8601Str, 8, 2).' '.$MONTHS2[((int) (substr($iso8601Str, 5, 2))-1)];
+  $fullDateStr = $DAYOFTHEWEEK1[$dayNumberInt].' '.substr($iso8601Str, 8, 2).' '.$MONTHS1[((int) (substr($iso8601Str, 5, 2))-1)];
+  $abbrDateStr = $DAYOFTHEWEEK2[$dayNumberInt].' '.substr($iso8601Str, 8, 2).' '.$MONTHS2[((int) (substr($iso8601Str, 5, 2))-1)];
   $outStr = '<abbr title="'.$fullDateStr.'">'.$abbrDateStr.'</abbr>'; // Build HTML string
   return $outStr;
 }
