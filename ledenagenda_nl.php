@@ -2,6 +2,14 @@
 namespace agendaLedenNl;
 
 /**
+ * Agenda viewer for members section of ccms-best.nl
+ *
+ * @version 1.0.2
+ * @author Ton van Lankveld
+ * @license MIT
+ */
+
+/**
  * Loads a JSON file with a list of the meetings and there details
  *
  * @return array The content of the JSON file or empty if the file is not found
