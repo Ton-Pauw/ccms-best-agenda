@@ -246,7 +246,7 @@ function agendaViewer_Main() {
   
   <div id="content">
   <h3>Agenda</h3>
-  
+  <p>Deze activiteiten zijn uitsluitend toegankelijk voor leden en genodigden van Computer Club Medical Systems. Of anders vermeld.</p>
 <table>
   <caption>Activiteiten in de komende periode</caption>
   <thead>
