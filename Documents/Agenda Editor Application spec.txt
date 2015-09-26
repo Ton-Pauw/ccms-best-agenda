@@ -1,27 +1,86 @@
-Agenda Editor Application spec
+Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2015-06-02
+Version: 2015-09-25
 
 
 PURPOSE
-An application to show and manage the Agenda page for the public and members part of www.ccms-best.nl .
+An application to show and manage the Calender page, for the public and members site of www.ccms-best.nl .
 
 
 FLOW
 The editor can only be accessed via the members site.
 You have to login to open the editor.
 Load ccms-agenda.json
-Load contactpersonen.json
 Build HTML Editor page with:
 - list of meetings with Edit and Delete buttons
 - Buttons Add Meetings and Undo
-- Hide contactpersonen data
 Changed to the data and the page, in the browser, are done with JavaScript.
 If you click on the Delete button, the row of this meeting will be deleted from the list.
-If you click on the Edit or Add Meeting button, the fields of the meeting are shown.
+If you click on the Edit or Add Meeting button, the fields of the (new) meeting are shown.
+    For every meeting you can select a workgroup.
+        Every workgroup has a contact person.
+        Load group-contact.json
     After the list is changed, this list is sorted on date-time.
     The list is backed-up in the session memory. For the Undo function.
-If you click the Save button, the list is stored on the server as; ccms-agenda.json.
+If you click the Save button, the list is stored on the server as: ccms-agenda.json.
 Close Editor page
-Copy file to public site.
+Copy (with ftp?) file to public site.
+
+
+SERVER SIDE
+Program language: PHP 5.x
+Filename: ccms-agenda-editor.php
+Send Login page to browser
+Wait for login data
+    Time-out after 120 seconds
+Check login data
+    If login data not correct --> wait 2 seconds and send login page again to browser
+Set session token
+Load ccms-agenda.json
+Sort agenda on date-time
+Build agenda editor page
+Send page to browser
+Wait for responce
+Receive ccms-agenda.json by httprequest (AJAX)
+Sanatize and validate agenda data
+Sort agenda on date-time
+If error(s) ...
+Else end
+
+
+BROWSER SIDE
+Program language: JavaScript
+If JavaScript is not enabled --> message: "If you want to edit the agenda, please enable JavaScript in your browser."
+Filename: ccms-agenda-editor.js
+Check for ccms-agenda.json and group-contact.json
+    If file(s) not found --> message: "Can not find agenda or contact file. You can not edit the agenda"
+Load ccms-agenda.json
+Load group-contact.json
+Watch buttons
+If Delete button is pressed:
+	Delete meeting row from HTML agenda table
+	Copy JSON data to Undo FILO buffer
+	Delete meeting from JSON data
+If Edit button is pressed:
+	Find requested meeting in JSON data
+	Show edit/add form
+	Fill edit/add form with data of requested meeting
+	See: Add Meeting button
+If Add Meeting button is pressed:
+	Show edit/add form, with Insert button
+	The user adds data to a field
+	Sanatize and validate data
+	If Group or Contact fields are selected:
+		Make selection list from group-contact.json
+		If group/contact is selected fill contact/group and e-mail field with data
+	If Insert button is pressed:
+		Copy JSON data to Undo FILO buffer
+		Add new/edited meeting to JSON data
+		Sort data on date-time
+		Rebuild HTML agenda table
+If Undo button is pressed:
+	Get last version of JSON data from Undo FILO buffer
+	Rebuild HTML agenda table
+If Save button is pressed:
+	Send JSON file to server (AJAX)
