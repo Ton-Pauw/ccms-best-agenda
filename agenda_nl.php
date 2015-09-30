@@ -4,7 +4,7 @@ namespace agendaPubliekNl;
 /**
  * Agenda viewer for Dutch public section of ccms-best.nl
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author Ton van Lankveld
  * @license MIT
  */
@@ -240,7 +240,7 @@ function agendaViewer_Main() {
 	<li><a href="activiteiten_nl.html" title="Wat wij allemaal doen">Activiteiten</a></li>
 	<li><a href="over_ons_nl.html" title="Achtergrondinformatie">Over Ons</a></li>
 	<li><a href="contact_nl.html" title="Contactgegevens">Contact</a></li>
-	<li id="languages"><a href="kalender_en.html" title="English Version"><img src="stijl/vlag_en.png" width="45px" height="30px" alt="English version" title="English version"></a></li>
+	<li id="languages" lang="en-US"><a href="agenda_en.php" title="English Version"><img src="stijl/vlag_en.png" width="45px" height="30px" alt="English version" title="English version"></a></li>
   </ul>
   </div> <!-- einde van nav -->
   
