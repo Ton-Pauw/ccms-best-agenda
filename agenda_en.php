@@ -15,7 +15,7 @@ namespace agendaPubliekEn;
  * @return array The content of the JSON file or empty if the file is not found
  */
 function loadJSONfile() {
-  $PATHDATAFILE = 'data/ccms-agenda.json';
+  $PATHDATAFILE = 'path/to/agenda.json';
   $outArray = [];
   if (file_exists($PATHDATAFILE)) {
     $handle = fopen($PATHDATAFILE, "r");
