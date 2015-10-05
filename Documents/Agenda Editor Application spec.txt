@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2015-09-25
+Version: 2015-10-05
 
 
 PURPOSE
@@ -11,11 +11,12 @@ An application to show and manage the Calender page, for the public and members 
 FLOW
 The editor can only be accessed via the members site.
 You have to login to open the editor.
-Load ccms-agenda.json
-Build HTML Editor page with:
+Build static HTML Editor page.
+The dynamic part of the page, in the browser, is done with JavaScript.
+Load ccms-agenda.json.
+Build meetings table with:
 - list of meetings with Edit and Delete buttons
 - Buttons Add Meetings and Undo
-Changed to the data and the page, in the browser, are done with JavaScript.
 If you click on the Delete button, the row of this meeting will be deleted from the list.
 If you click on the Edit or Add Meeting button, the fields of the (new) meeting are shown.
     For every meeting you can select a workgroup.
@@ -37,10 +38,7 @@ Wait for login data
 Check login data
     If login data not correct --> wait 2 seconds and send login page again to browser
 Set session token
-Load ccms-agenda.json
-Sort agenda on date-time
-Build agenda editor page
-Send page to browser
+Send Agenda Editor page, without meeting table nor buttons, to user. Filename: ccms-agenda-editor.html(php?)
 Wait for responce
 Receive ccms-agenda.json by httprequest (AJAX)
 Sanatize and validate agenda data
@@ -54,9 +52,10 @@ Program language: JavaScript
 If JavaScript is not enabled --> message: "If you want to edit the agenda, please enable JavaScript in your browser."
 Filename: ccms-agenda-editor.js
 Check for ccms-agenda.json and group-contact.json
-    If file(s) not found --> message: "Can not find agenda or contact file. You can not edit the agenda"
+    If file(s) not found --> message: "Can not find agenda or contact file. Can not show agenda."
 Load ccms-agenda.json
 Load group-contact.json
+Insert meetings table
 Watch buttons
 If Delete button is pressed:
 	Delete meeting row from HTML agenda table
@@ -64,7 +63,7 @@ If Delete button is pressed:
 	Delete meeting from JSON data
 If Edit button is pressed:
 	Find requested meeting in JSON data
-	Show edit/add form
+	Show edit/add form, with Save button
 	Fill edit/add form with data of requested meeting
 	See: Add Meeting button
 If Add Meeting button is pressed:
@@ -74,13 +73,13 @@ If Add Meeting button is pressed:
 	If Group or Contact fields are selected:
 		Make selection list from group-contact.json
 		If group/contact is selected fill contact/group and e-mail field with data
-	If Insert button is pressed:
+	If Save/Insert button is pressed:
 		Copy JSON data to Undo FILO buffer
 		Add new/edited meeting to JSON data
 		Sort data on date-time
 		Rebuild HTML agenda table
+		Send JSON file to server (AJAX)
 If Undo button is pressed:
 	Get last version of JSON data from Undo FILO buffer
 	Rebuild HTML agenda table
-If Save button is pressed:
 	Send JSON file to server (AJAX)
