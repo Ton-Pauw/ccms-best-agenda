@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2015-10-05
+Version: 2015-10-15
 
 
 PURPOSE
@@ -24,32 +24,35 @@ If you click on the Edit or Add Meeting button, the fields of the (new) meeting 
         Load group-contact.json
     After the list is changed, this list is sorted on date-time.
     The list is backed-up in the session memory. For the Undo function.
-If you click the Save button, the list is stored on the server as: ccms-agenda.json.
+If you click the Save/Insert button, the list is stored on the server as: ccms-agenda.json.
 Close Editor page
 Copy (with ftp?) file to public site.
 
 
 SERVER SIDE
-Program language: PHP 5.x
-Filename: ccms-agenda-editor.php
-Send Login page to browser
-Wait for login data
-    Time-out after 120 seconds
-Check login data
-    If login data not correct --> wait 2 seconds and send login page again to browser
-Set session token
-Send Agenda Editor page, without meeting table nor buttons, to user. Filename: ccms-agenda-editor.html(php?)
-Wait for responce
-Receive ccms-agenda.json by httprequest (AJAX)
-Sanatize and validate agenda data
-Sort agenda on date-time
-If error(s) ...
-Else end
+OPTION 1
+    Program language: PHP 5.x
+    Filename: ccms-agenda-editor.php
+    Send Login page to browser
+    Wait for login data
+        Time-out after 120 seconds
+    Check login data
+        If login data not correct --> wait 2 seconds and send login page again to browser
+    Set session token
+    Send Agenda Editor page, without meeting table nor buttons, to user
+    Wait for responce
+    Receive ccms-agenda.json by httprequest (AJAX)
+    Sanatize and validate agenda data
+    Sort agenda on date-time
+    If error(s) ...
+    Else end
+OPTION 2
+    Filename: ccms-agenda-editor.html, without meeting table nor buttons
 
 
 BROWSER SIDE
 Program language: JavaScript
-If JavaScript is not enabled --> message: "If you want to edit the agenda, please enable JavaScript in your browser."
+If JavaScript is not enabled --> message: "If you want to see the agenda, please enable JavaScript in your browser."
 Filename: ccms-agenda-editor.js
 Check for ccms-agenda.json and group-contact.json
     If file(s) not found --> message: "Can not find agenda or contact file. Can not show agenda."
@@ -61,6 +64,8 @@ If Delete button is pressed:
 	Delete meeting row from HTML agenda table
 	Copy JSON data to Undo FILO buffer
 	Delete meeting from JSON data
+	Rebuild HTML agenda table
+	Send JSON file to server (AJAX)
 If Edit button is pressed:
 	Find requested meeting in JSON data
 	Show edit/add form, with Save button
@@ -80,6 +85,6 @@ If Add Meeting button is pressed:
 		Rebuild HTML agenda table
 		Send JSON file to server (AJAX)
 If Undo button is pressed:
-	Get last version of JSON data from Undo FILO buffer
+	Get last version of JSON data from Undo FILO (session memory) buffer
 	Rebuild HTML agenda table
 	Send JSON file to server (AJAX)
