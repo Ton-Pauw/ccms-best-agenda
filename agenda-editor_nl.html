@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>CCMS-Leden - Agenda Editor</title>
+  <meta name="description" content="Editor om de bijeenkomsten in de agenda te bewerken.">
+  <meta name="author" content="Ton van Lankveld">
+  <link rel="stylesheet" href="stijl/html5_screen.css" media="screen">
+  <link rel="stylesheet" href="stijl/html5_print.css" media="print">
+</head>
+<body>
+  <header>
+    <h1 lang="en">Computer Club Medical Systems</h1>
+	<h2>Leden</h2>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="agenda_nl.php">Publieke Agenda</a></li>
+      <li><a href="ledenagenda_nl.php">Leden Agenda</a></li>
+    </ul>
+  </nav>
+  <article>
+    <h3>Agenda Editor</h3>
+    <section class="error">
+      <p>If you want to see and edit the agenda, please enable JavaScript in your browser.</p>
+    </section>
+    <section id="editadd">
+    </section>
+    <section id="permbuttons">
+      <button id="add" type="button">Nieuwe bijeenkomst</button>
+      <button id="sort" type="button">Sorteer</button>
+      <button id="undo" class="notactive" type="button">Herstel</button>
+    </section>
+    <section id="meetings">
+    </section>
+  </article>
+  <footer>
+    <p>De inhoud van deze site valt onder een <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/nl/"><span lang="en">Creative Commons</span> licentie</a><span class="url"> (http://creativecommons.org/licenses/by-nc/3.0/nl/)</span>.</p>
+  </footer>
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="agenda-editor.js"></script>
+</body>
+</html>
