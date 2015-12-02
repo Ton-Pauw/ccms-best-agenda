@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2015-10-25
+Version: 2015-12-02
 
 
 PURPOSE
@@ -19,13 +19,12 @@ Build meetings table with:
 - Buttons Add Meetings and Undo
 If you click on the Delete button, the row of this meeting will be deleted from the list.
 If you click on the Edit or Add Meeting button, the fields of the (new) meeting are shown.
+    Load group-contact.json
     For every meeting you can select a workgroup.
         Every workgroup has a contact person.
-        Load group-contact.json
-    After the list is changed, this list is sorted on date-time.
+    After the list is changed, this list is sorted on 'start' date-time.
 If you click the Save/Insert button, the list is stored on the server as: ccms-agenda.json.
-If you click on Undo button, ccms-agenda.json loaded from server
-    Only one undo step possible
+If you click on Undo button, JSON data is replaced by data in Undo-stack
 Close Editor page
 Copy (with ftp?) file to public site.
 
@@ -56,20 +55,20 @@ OPTION 2
 BROWSER SIDE
 Program language: JavaScript
 If JavaScript is not enabled --> message: "If you want to see the agenda, please enable JavaScript in your browser."
-Filename: ccms-agenda-editor.js
+Filename: agenda-editor.js
 Check for ccms-agenda.json and group-contact.json
     If file(s) not found --> message: "Can not find agenda or contact file. Can not show agenda."
 Load ccms-agenda.json
-Load group-contact.json
 Insert meetings table
 Watch buttons
 If Delete button is pressed:
-	Delete meeting row from HTML agenda table
+    Copy JSON data to Undo-stack
+    If Undo button is disabled:
+	    Enable Undo button
 	Delete meeting from JSON data
+	Sort data on 'start' date-time
 	Rebuild HTML agenda table
 	Send JSON file to server (AJAX)
-	If Undo button is disabled:
-	    Enable Undo button
 If Edit button is pressed:
 	Find requested meeting in JSON data
 	Show edit/add form, with Save button
@@ -77,19 +76,28 @@ If Edit button is pressed:
 	See: Add Meeting button
 If Add Meeting button is pressed:
 	Show edit/add form, with Insert button
+	Load group-contact.json
 	The user adds data to a field
 	Sanatize and validate data
 	If Group or Contact fields are selected:
 		Make selection list from group-contact.json
 		If group/contact is selected fill contact/group and e-mail field with data
 	If Save/Insert button is pressed:
+	    Copy JSON data to Undo-stack
+	    If Undo button is disabled:
+	        Enable Undo button
 		Add new/edited meeting to JSON data
-		Sort data on date-time
+		Sort data on 'start' date-time
 		Rebuild HTML agenda table
 		Send JSON file to server (AJAX)
 		If Undo button is disabled:
 	        Enable Undo button
+If Sort button is pressed:
+    Sort data on 'start' date-time
 If Undo button is pressed:
-	Get JSON file from server
+	Replace JSON data with last data set in Undo-stack
+	Delete last data set in Undo-stack
+	If Undo-stack is empty:
+	    Disable Undo button
 	Rebuild HTML agenda table
-	Disable Undo button
+	Send JSON file to server (AJAX)
