@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initial="loadAgendaFromServer">
+    <state id="loadAgendaFromServer">
+        <transition event="editor.loaded" target="standardPage"/>
+    </state>
+    <state id="standardPage">
+        <transition event="editor.add" target="addMeetingPage"/>
+        <transition event="editor.edit" target="editPage"/>
+        <transition event="editor.delete" target="deleteMeeting"/>
+        <transition event="editor.sort" target="sortAgenda"/>
+        <transition event="editor.undo" target="firstInLastOutBuffer"/>
+    </state>
+    <state id="addMeetingPage">
+        <transition event="editor.insert" target="sortAgenda"/>
+        <transition event="editor.cancel" target="standardPage"/>
+    </state>
+    <state id="editPage">
+        <transition event="editor.save" target="sortAgenda"/>
+        <transition event="editor.cancel" target="standardPage"/>
+    </state>
+    <state id="deleteMeeting">
+        <transition event="editor.deleted" target="sortAgenda"/>
+    </state>
+    <state id="sortAgenda">
+        <transition event="editor.sorted" target="firstInLastOutBuffer"/>
+    </state>
+    <state id="firstInLastOutBuffer">
+        <transition event="editor.send" target="sendAgendaToServer"/>
+    </state>
+    <state id="sendAgendaToServer">
+        <transition event="editor.refresh" target="standardPage"/>
+    </state>
+</scxml>
