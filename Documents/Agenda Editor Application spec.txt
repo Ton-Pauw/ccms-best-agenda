@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2016-01-01
+Version: 2016-01-04
 
 
 PURPOSE
@@ -59,7 +59,7 @@ Filename: agenda-editor.js
 Check for ccms-agenda.json and group-contact.json
     If file(s) not found --> message: "Can not find agenda or contact file. Can not show agenda."
 Load ccms-agenda.json
-Show default page; permanent buttons and meetings table
+Show default page; Add/Sort/Undo buttons and meetings table
 Watch buttons
 If Delete button is pressed:
     Copy JSON data to Undo-stack
@@ -71,10 +71,12 @@ If Delete button is pressed:
 	Send JSON file to server (AJAX)
 If Edit button is pressed:
 	Find requested meeting in JSON data
+	Hide Add/Sort/Undo buttons
 	Show edit/add form, with Save and Cancel button
 	Fill edit/add form with data of requested meeting
 	See: Add Meeting button
 If Add Meeting button is pressed:
+    Hide Add/Sort/Undo buttons
 	Show edit/add form, with Insert and Cancel button
 	Load group-contact.json
 	The user adds data to a field
