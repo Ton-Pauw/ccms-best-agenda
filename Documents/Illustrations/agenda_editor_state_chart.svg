@@ -237,7 +237,7 @@
           </cc:Agent>
         </dc:publisher>
         <dc:language>en-US</dc:language>
-        <dc:date>2016-01-03</dc:date>
+        <dc:date>2016-01-05</dc:date>
         <dc:creator>
           <cc:Agent>
             <dc:title>Ton van Lankveld</dc:title>
@@ -313,12 +313,6 @@ CCMS Agenda Editor</dc:description>
          y="-183.74161"
          id="tspan3472">Server</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-7-6)"
-       d="m 355,-55.000026 c -54.94921,77.23561 -42.13242,135.27085 0,184.999996"
-       id="path6265"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-7-6);display:inline"
        d="m 365,-82.500023 c -56.5648,14.05139 -102.5424,44.991881 -135,97.499997"
        id="path6465-1"
@@ -367,6 +361,13 @@ CCMS Agenda Editor</dc:description>
        id="path5847-7"
        inkscape:connector-curvature="0" />
     <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6701)"
+       d="m 150,512.36218 190,105"
+       id="path4139"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-352.3622)"
+       sodipodi:nodetypes="cc" />
+    <path
        sodipodi:type="arc"
        style="fill:#c6e9af;fill-opacity:1;stroke:#000000;stroke-width:1.41666663;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        id="path3346-0"
@@ -374,22 +375,22 @@ CCMS Agenda Editor</dc:description>
        sodipodi:cy="152.36218"
        sodipodi:rx="42.5"
        sodipodi:ry="42.5"
-       d="m 372.5,152.36218 c 0,23.4721 -19.0279,42.5 -42.5,42.5 -23.4721,0 -42.5,-19.0279 -42.5,-42.5 0,-23.4721 19.0279,-42.5 42.5,-42.5 23.4721,0 42.5,19.0279 42.5,42.5 z"
-       transform="matrix(0.70588235,0,0,0.70588235,137.05883,-67.549799)" />
+       d="m 372.5,152.36218 a 42.5,42.5 0 1 1 -85,0 42.5,42.5 0 1 1 85,0 z"
+       transform="matrix(0.70588235,0,0,0.70588235,-82.941175,52.450207)" />
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="369.97189"
-       y="36.206566"
+       x="149.97191"
+       y="156.20657"
        id="text3348-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="369.97189"
-         y="36.206566"
+         x="149.97191"
+         y="156.20657"
          id="tspan3354-9">Delete</tspan><tspan
          sodipodi:role="line"
-         x="369.97189"
-         y="48.706566"
+         x="149.97191"
+         y="168.70657"
          id="tspan3486">Meeting</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-7-6);display:inline"
@@ -579,14 +580,8 @@ CCMS Agenda Editor</dc:description>
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
-       d="m 370,-50.000023 0,57.5000004"
+       d="m 370,-50.000023 0,177.500003"
        id="path4954-9"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
-       d="m 370,69.999977 0,57.499993"
-       id="path4954-9-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
@@ -701,14 +696,14 @@ CCMS Agenda Editor</dc:description>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="315.87967"
-       y="43.339363"
+       x="367.55551"
+       y="42.585758"
        id="text6985"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6987"
-         x="315.87967"
-         y="43.339363">Sort</tspan></text>
+         x="367.55551"
+         y="42.585758">Sort</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
@@ -751,26 +746,45 @@ CCMS Agenda Editor</dc:description>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="22.516218"
-       y="367.3779"
+       x="248.42438"
+       y="63.928459"
        id="text7001"
        sodipodi:linespacing="125%"
-       transform="matrix(0,-1,1,0,0,0)"><tspan
+       transform="matrix(0.87551336,-0.48319392,0.48319392,0.87551336,0,0)"><tspan
          sodipodi:role="line"
          id="tspan7003"
-         x="22.516218"
-         y="367.3779">Delete</tspan></text>
+         x="248.42438"
+         y="63.928459">Delete</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-96.16906"
-       y="367.25876"
+       x="322.99738"
+       y="63.806423"
        id="text7001-7"
        sodipodi:linespacing="125%"
-       transform="matrix(0,-1,1,0,0,0)"><tspan
+       transform="matrix(0.87397837,0.48596483,-0.48596483,0.87397837,0,0)"><tspan
          sodipodi:role="line"
          id="tspan7003-3"
-         x="-96.16906"
-         y="367.25876">deleted</tspan></text>
+         x="322.99738"
+         y="63.806423">deleted</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker6701)"
+       d="m 340,264.86218 c -130,15 -190,97.5 -190,215"
+       id="path3093"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-352.3622)"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="319.94583"
+       y="86.038002"
+       id="text7001-7-6"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.88664112,0.46245813,-0.46245813,0.88664112,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan7003-3-0"
+         x="319.94583"
+         y="86.038002">(+1)</tspan></text>
   </g>
 </svg>
