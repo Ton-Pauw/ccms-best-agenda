@@ -1,7 +1,7 @@
 Calender Editor Application spec
 
 Author: Ton van Lankveld
-Version: 2016-01-04
+Version: 2016-01-05
 
 
 PURPOSE
@@ -85,6 +85,7 @@ If Add Meeting button is pressed:
 		Make selection list from group-contact.json
 		If group/contact is selected fill contact/group and e-mail field with data
 	If Save/Insert button is pressed:
+	    Show Add/Sort/Undo buttons
 	    Copy JSON data to Undo-stack
 	    If Undo button is disabled:
 	        Enable Undo button
