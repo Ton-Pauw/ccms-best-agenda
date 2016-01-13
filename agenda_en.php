@@ -4,7 +4,7 @@ namespace agendaPubliekEn;
 /**
  * Agenda viewer for English public section of www.ccms-best.nl
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author Ton van Lankveld
  * @license MIT
  */
@@ -78,74 +78,92 @@ function filterValidateIso8601($inpStr) {
 } 
 
 /**
- * Filter and validate the strings of a meeting
- *
- * @param array $meetingArray_input The meeting parameters with input strings of: start, end, onderwerp, subject, groep, group, location, contact and email
- * @return array The clean strings
- */
+* Filter and validate the strings of a meeting
+*
+* @param array $meetingArray_input The meeting parameters with input strings of: start, end, onderwerp, subject, groep, group, location, contact and email
+* @return array The clean strings
+*/
 function filterValidateMeetingArray($inpArray) {
-  $meetingArrayClean = [
-    'start'     => '',
-    'end'       => '',
-    'onderwerp' => '',
-    'subject'   => '',
-    'groep'     => '',
-    'group'     => '',
-    'location'  => '',
-    'contact'   => '',
-    'email'     => ''
-  ];
+$meetingArrayClean = [
+'start' => '',
+'end' => '',
+'onderwerp' => '',
+'subject' => '',
+'groep' => '',
+'group' => '',
+'location' => '',
+'contact' => '',
+'email' => ''
+];
+if ($inpArray['start']) {
   $startClean = filterValidateIso8601($inpArray['start']);
   if ($startClean) {
     $meetingArrayClean['start'] = $startClean;
-  };
+  }
+}
+if ($inpArray['end']) {
   $endClean = filterValidateIso8601($inpArray['end']);
   if ($endClean) {
     $meetingArrayClean['end'] = $endClean;
-  };
+  }
+}
+if ($inpArray['onderwerp']) {
   if (is_string($inpArray['onderwerp'])) {
     $onderwerpClean = htmlspecialchars($inpArray['onderwerp'], ENT_HTML401);
     if ($onderwerpClean) {
       $meetingArrayClean['onderwerp'] = $onderwerpClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['subject']) {
   if (is_string($inpArray['subject'])) {
     $subjectClean = htmlspecialchars($inpArray['subject'], ENT_HTML401);
     if ($subjectClean) {
       $meetingArrayClean['subject'] = $subjectClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['groep']) {
   if (is_string($inpArray['groep'])) {
     $groepClean = strip_tags($inpArray['groep']);
     if ($groepClean) {
       $meetingArrayClean['groep'] = $groepClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['group']) {
   if (is_string($inpArray['group'])) {
     $groupClean = strip_tags($inpArray['group']);
     if ($groupClean) {
       $meetingArrayClean['group'] = $groupClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['location']) {
   if (is_string($inpArray['location'])) {
     $locationClean = strip_tags($inpArray['location']);
     if ($locationClean) {
       $meetingArrayClean['location'] = $locationClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['contact']) {
   if (is_string($inpArray['contact'])) {
     $contactClean = strip_tags($inpArray['contact']);
     if ($contactClean) {
       $meetingArrayClean['contact'] = $contactClean;
-    };
-  };
+    }
+  }
+}
+if ($inpArray['email']) {
   if (is_string($inpArray['email'])) {
     $emailSanitized = filter_var($inpArray['email'], FILTER_SANITIZE_EMAIL);
     if (filter_var($emailSanitized, FILTER_VALIDATE_EMAIL)) {
       $meetingArrayClean['email'] = $emailSanitized;
-    };
-  };
-  return $meetingArrayClean;
+    }
+  }
+}
+return $meetingArrayClean;
 }
 
 /**
