@@ -1,0 +1,128 @@
+Agenda Editor To-Do List
+
+*** PHP ***
+
+LOGIN
+
+ACCOUNT MANAGMENT
+
+
+*** JAVASCRIPT ***
+
+CONNECTION TO SERVER
+
+/**
+* @function
+* @name loadJSONfromServer
+* @description Load the agenda (JSON) file from the server
+* @param {string} jsonFilePath - Path to the JSON file
+* @return {array} agendaArr - Array with the meetings data. Empty if file not found
+*/
+function loadJSONfromServer(jsonFilePath) {
+  "use strict";
+}
+
+/**
+* @function
+* @name saveJSONtoServer
+* @description Save the agenda (JSON) file to the server
+* @param {array} agendaArr - Array with the meetings data
+* @param {string} jsonFilePath - Path to the JSON file
+* @return {int} status - Responce code of the server
+*/
+function saveJSONtoServer(agendaArr, jsonFilePath) {
+  "use strict";
+}
+
+SANATIZE & VALIDATE JSON DATA
+
+/**
+* @function
+* @name whiteFilterStr
+* @description Filter a string and allow only characters in the white list string
+* @param {string} inputStr - String to be sanatized
+* @param {string} whiteListStr - Allowed characters
+* @return {string} Sanatized string. If fault then empty
+*/
+function whiteFilterStr(inputStr, whiteListStr) {
+  "use strict";
+}
+
+/**
+* @function
+* @name filterValidateIso8601
+* @description Filter and validate a string with local date-time data in ISO8601 format
+* @param {string} inputStr - ISO8601 data-time data
+* @return {string} Correct ISO8601 string. If fault then empty
+*/
+function filterValidateIso8601(inputStr) {
+  "use strict";
+}
+
+/**
+* @function
+* @name filterValidateMeetingArray
+* @description Filter and validate the strings of one meeting
+* @param {array} meetingArray - The meeting parameters with input strings of: start, end, onderwerp, subject, groep, group, location, contact and email
+* @return {array} The clean strings
+*/
+function filterValidateMeetingArray(meetingArray) {
+  "use strict";
+}
+
+SORT AGENDA
+
+/**
+* @function
+* @name sortAfterAdd
+* @description Sort the meetings on date-time, of the 'start'key
+* @param {array} agendaArr - Agenda array to be sorted
+* @return {array} sortedArr - Sorted agenda array
+*/
+function sortAfterAdd(agendaArr) {
+  "use strict";
+}
+
+/**
+* @function
+* @name sortAfterDelete
+* @description Sort the meetings on date-time, of the 'start'key
+* @param {array} agendaArr - Agenda array to be sorted
+* @return {array} sortedArr - Sorted agenda array
+*/
+function sortAfterDelete(agendaArr) {
+  "use strict";
+}
+
+/**
+* @function
+* @name sortMeetings
+* @description Sort the meetings on date-time, of the 'start'key
+* @param {array} agendaArr - Agenda array to be sorted
+* @return {array} sortedArr - Sorted agenda array
+*/
+function sortAfterAdd(agendaArr) {
+  "use strict";
+}
+
+OTHERS
+
+/**
+* @function
+* @name agendaEditor
+* @description Main loop
+*/
+function agendaEditor() {
+  "use strict";
+}
+
+/**
+* @function
+* @name blinkServerIndicator
+* @description Let the server indictor blink one time
+* @param {string} status - Server status: 'ok' | 'fault'
+*/
+function blinkServerIndicator(status) {
+  "use strict";
+--TvL--
+}
