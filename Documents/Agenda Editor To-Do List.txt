@@ -74,34 +74,24 @@ SORT AGENDA
 
 /**
 * @function
-* @name sortAfterAdd
-* @description Sort the meetings on date-time, of the 'start'key
+* @name sortAgendaOneChanged
+* @description Sort the meetings on date-time, of the 'start'key. After edit or add one meeting
 * @param {array} agendaArr - Agenda array to be sorted
+* @param {int} rowNr - Added or edited row
 * @return {array} sortedArr - Sorted agenda array
 */
-function sortAfterAdd(agendaArr) {
+function sortAgendaOneChanged(agendaArr, rowNr) {
   "use strict";
 }
 
 /**
 * @function
-* @name sortAfterDelete
+* @name sortAgenda
 * @description Sort the meetings on date-time, of the 'start'key
 * @param {array} agendaArr - Agenda array to be sorted
 * @return {array} sortedArr - Sorted agenda array
 */
-function sortAfterDelete(agendaArr) {
-  "use strict";
-}
-
-/**
-* @function
-* @name sortMeetings
-* @description Sort the meetings on date-time, of the 'start'key
-* @param {array} agendaArr - Agenda array to be sorted
-* @return {array} sortedArr - Sorted agenda array
-*/
-function sortAfterAdd(agendaArr) {
+function sortAgenda(agendaArr) {
   "use strict";
 }
 
@@ -114,15 +104,4 @@ OTHERS
 */
 function agendaEditor() {
   "use strict";
-}
-
-/**
-* @function
-* @name blinkServerIndicator
-* @description Let the server indictor blink one time
-* @param {string} status - Server status: 'ok' | 'fault'
-*/
-function blinkServerIndicator(status) {
-  "use strict";
---TvL--
 }
