@@ -82,6 +82,7 @@ SORT AGENDA
 */
 function sortAgendaOneChanged(agendaArr, rowNr) {
   "use strict";
+  --TvL--
 }
 
 /**
