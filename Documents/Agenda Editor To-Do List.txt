@@ -82,7 +82,7 @@ SORT AGENDA
 */
 function sortAgendaOneChanged(agendaArr, rowNr) {
   "use strict";
-  --TvL--
+--TvL--
 }
 
 /**
@@ -93,6 +93,31 @@ function sortAgendaOneChanged(agendaArr, rowNr) {
 * @return {array} sortedArr - Sorted agenda array
 */
 function sortAgenda(agendaArr) {
+  "use strict";
+}
+
+EDIT OR ADD MEETING
+
+/**
+* @function
+* @name editMeetingMode
+* @desription Edit the data of one meeting
+* @param {array} agendaArr - Agenda
+* @param {int} rowNr - Row to be edit
+* @return {array} editedArr - Agenda with one edited meeting
+*/
+function editMeetingMode(agendaArr, rowNr) {
+  "use strict";
+}
+
+/**
+* @function
+* @name addMeetingMode
+* @desription Add one meeting to the agenda
+* @param {array} agendaArr - Agenda
+* @return {array} extendedAgendaArr - Agenda with one added meeting
+*/
+function addMeetingMode(agendaArr) {
   "use strict";
 }
 
